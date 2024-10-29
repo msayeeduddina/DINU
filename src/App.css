@@ -1,0 +1,10 @@
+body {
+    padding: 0.5rem 3.5rem;
+    overflow: hidden;
+    color: black;
+    background-color: linear-gradient(
+        to bottom right,
+        rgb(36, 5, 62),
+        rgb(66, 5, 99)
+    );
+}

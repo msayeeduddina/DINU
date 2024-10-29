@@ -1,0 +1,715 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@500&family=Montserrat:wght@500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat';
+    background: url('../images/line.png') no-repeat center bottom 40% / contain,
+        url('../images/bgnew.png') center/cover no-repeat;
+    /* font-weight: 400;
+    font-size: 1.3215rem;
+    line-height: 1.6; */
+}
+
+h3 {
+    font-size: clamp(3rem, 10vw+1rem, 5rem);
+}
+
+/* navigation bar */
+.nav {
+    background-color: inherit;
+    padding: 0.6rem 7.5rem;
+    position: relative;
+}
+.nav .logo,
+.footer .logo {
+    height: 45px;
+    margin-right: 10px;
+}
+.nav .name,
+.footer .name {
+    height: 27px;
+}
+
+.navigation-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 38px;
+}
+
+.navigation-menu li {
+    margin: 0px 16px;
+}
+
+.navigation-menu li a {
+    font-size: 13px;
+    text-decoration: none;
+    color: white;
+}
+.navigation-menu li a:hover {
+    color: #00afff;
+}
+.nav .icons img {
+    width: 26px;
+    margin: 11px 13px;
+    cursor: pointer;
+    filter: invert(1);
+    transition: all 400ms;
+}
+
+/* mobile view navigation */
+.mobile-navigation {
+    list-style: none;
+}
+
+.mobile-navigation li {
+    margin-top: 15px;
+    padding: 5px 0px;
+}
+
+.mobile-navigation li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mobile-navigation li a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: black;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+/* buy section */
+.buy,
+.about {
+    padding: 2rem 4rem 2rem 8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.buy .headerContainer,
+.about .headerContainer {
+    padding: 1.5rem 0rem 1.5rem 1.5rem;
+    color: white;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buy .headerContainer p {
+    line-height: 2;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    margin-left: 0.3rem;
+    line-height: 1.7;
+}
+
+.buy .headerContainer button {
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 48px;
+    padding: 5px 35px;
+    text-decoration: none;
+    color: white;
+}
+
+.buy .headerContainer .left,
+.buy .headerContainer .right:hover {
+    background-image: linear-gradient(to bottom, #00afff, #d25afb);
+    margin-right: 20px;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    border: 1px solid #13141f;
+}
+.buy .headerContainer .left:hover,
+.buy .headerContainer .right {
+    background-image: none;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.buy .headerContainer button:hover {
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.buy .headerImage {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-left: 2rem; */
+}
+
+.buy .headerImage .foreground {
+    position: relative;
+    z-index: 100;
+    width: 85%;
+    max-width: 40vw;
+    height: auto;
+    transform: scaleX(-1);
+}
+.buy .headerImage .background {
+    position: absolute;
+    margin-top: 4rem;
+    left: 2rem;
+    z-index: 0;
+    width: 91%;
+    max-width: 40vw;
+    height: auto;
+}
+
+/* about section */
+.about {
+    position: relative;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 74%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../images/top_line.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 60% 100%;
+    transform: translateX(35%);
+}
+
+.about .headerImage {
+    /* padding: 0rem 1.75rem 0rem 2.25rem; */
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .headerImage .foreground {
+    position: relative;
+    z-index: 100;
+    width: 95%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    /* max-width: 34vw; */
+    height: auto;
+}
+.about .headerImage .background {
+    position: absolute;
+    margin-top: 2rem;
+    /* top: 0; */
+    /* left: 2rem; */
+    z-index: 0;
+    width: 80%;
+    max-width: 27vw;
+    height: auto;
+}
+
+.about .headerContainer {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.about .headerContainer p {
+    font-size: 13px;
+    line-height: 2;
+    margin-right: 25px;
+    font-family: 'Montserrat';
+}
+
+/* solution section */
+.solution {
+    color: white;
+    padding: 4rem 6rem;
+}
+
+.solution .row,
+.roadmap .row {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.roadmap .row::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    display: flex;
+    justify-self: center;
+    width: 943px;
+    height: 1.5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+}
+
+.solution .row .solBox {
+    width: 210px;
+}
+
+.solution .row .solBox,
+.roadmap .row .solBox {
+    position: relative;
+    width: 210px;
+    margin: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(
+        rgba(0, 175, 255, 0.3) 5%,
+        rgba(0, 175, 255, 0)
+    );
+    font-family: 'Montserrat';
+}
+
+.solution .row .solBox .solImg {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    margin-bottom: 10px;
+}
+.solution .row .solBox .solImg img {
+    width: 100%;
+}
+
+.solution .row .solBox h1 {
+    color: rgba(255, 255, 255, 0.2);
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.solution .row .solBox h6,
+.roadmap .row .solBox h6 {
+    font-weight: bold;
+    font-size: 19px;
+    height: 50px;
+    margin: 35px 0 10px 0;
+    font-family: 'Montserrat';
+    text-align: center;
+    line-height: 1.2;
+}
+
+.solution .row .solBox p,
+.roadmap .row .solBox p {
+    font-size: 12px;
+    line-height: 1.3;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.roadmap .row .solBox p {
+    line-height: 1.4;
+}
+
+.solution .row .solBox p {
+    margin-bottom: 10px;
+}
+
+.solution .row .solBox h1 {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    margin-top: 30px;
+    font-family: 'Montserrat';
+}
+
+/* roadmap section */
+.roadmap {
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.roadmap .row .solBox .solLine {
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.5px;
+    height: 88px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.roadmap .row .solBox .solNum {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+.roadmap .row .solBox .solNum p {
+    font-size: 40px;
+    color: #1da9f5;
+    font-weight: bold;
+}
+
+/* tokenomic section */
+.tokenomic {
+    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+}
+
+.tokenomic .row {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.tokenomic .row h3 {
+    font-weight: bold;
+    margin-bottom: 12px;
+    font-family: 'Montserrat';
+}
+
+.tokenomic .roadImg {
+    text-align: center;
+}
+
+.tokenomic .roadImg img {
+    width: 41rem;
+}
+
+.tokenomic .tokpills {
+    margin-bottom: 20px;
+    padding: 0rem 6rem;
+    display: flex;
+    justify-content: center;
+    color: black;
+}
+
+.tokenomic .tokpills .pill {
+    background-color: #9bd8f9;
+    padding: 6px 17px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+.tokenomic .tokpills .pill div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* details section */
+.details {
+    padding: 2rem 3rem 4rem 3rem;
+}
+
+.details .detailsRow {
+    display: flex;
+    padding: 40px 40px 40px 20px;
+    height: 500px;
+    box-shadow: 0 0 15px 15px rgba(60, 55, 104, 0.2),
+        0 0 25px 25px rgba(47, 45, 62, 0.2);
+    border-radius: 10px;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    background-color: rgba(80, 73, 107, 0.35);
+
+    justify-content: space-around;
+}
+
+.footer {
+    height: 50vh;
+    padding: 0rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.footer-link {
+    list-style: none;
+    display: flex;
+    margin-top: 22px;
+    font-family: Montserrat;
+}
+.footer-link li a:hover {
+    color: #00afff;
+}
+
+.footer-link a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.footer .footer-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 3px 0;
+}
+
+.footer .footer-img img {
+    width: 1.7rem;
+    margin: 11px 13px;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 'all 400ms';
+}
+
+.details .detailsRow .detailsData .coinpill {
+    padding: 10px 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #13131f;
+    border-radius: 25px;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.details .detailsRow .detailsData .coinpillvalue {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav {
+        padding: 0.6rem 5rem;
+    }
+    .nav .logo,
+    .footer .logo {
+        height: 35px;
+    }
+    .nav .name,
+    .footer .name {
+        height: 20px;
+    }
+    .buy {
+        padding: 2rem 5rem;
+    }
+
+    .about {
+        padding: 2rem 3rem;
+    }
+    .buy .headerContainer {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    .about .headerContainer {
+        padding: 0.5rem;
+    }
+    .details {
+        padding: 1rem;
+    }
+
+    .details .detailsRow {
+        padding: 15px 25px 15px 5px;
+        height: auto;
+        margin-left: 8rem;
+        margin-right: 8rem;
+        justify-content: space-around;
+    }
+
+    .buy .headerContainer p,
+    .about .headerContainer p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .tokenomic .roadImg img {
+        width: 35rem;
+    }
+    .tokenomic .tokpills {
+        padding: 0rem 4rem;
+    }
+
+    .tokenomic .tokpills .pill {
+        padding: 5px 15px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .roadmap .row::before {
+        top: -100px;
+        width: 757px;
+    }
+
+    .roadmap .row .solBox .solLine {
+        top: -15%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 89px;
+    }
+
+    .details .detailsRow .detailsData .coinpill {
+        padding: 7px 40px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        border-radius: 25px;
+        font-size: 16px;
+    }
+    .details .detailsRow .detailsData .coinpillvalue {
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    .footer-link a {
+        font-size: 0.8rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .navigation-menu li a {
+        font-size: 11px;
+    }
+    .footer .footer-img {
+        margin: 10px 0px 3px 0;
+    }
+    .nav .icons img,
+    .footer .footer-img img {
+        width: 23px;
+        margin: 11px 11px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+    .nav {
+        background-color: inherit;
+        padding: 0.6rem 1rem;
+        position: relative;
+    }
+    .buy,
+    .about {
+        padding: 1.5rem;
+    }
+    .about .headerImage .background {
+        padding: 0rem;
+        width: 90%;
+        max-width: 27vw;
+    }
+    .about .headerImage .foreground {
+        width: 100%;
+        /* max-width: 34vw; */
+    }
+    .about .headerContainer {
+        padding: 0rem;
+    }
+    .about .headerContainer p {
+        margin-right: 0px;
+        font-size: 12px;
+    }
+    .buy .headerContainer {
+        padding: 0.5rem;
+    }
+
+    .buy .headerImage {
+        align-items: center;
+    }
+    .buy .headerImage .foreground,
+    .buy .headerImage .background {
+        padding-bottom: 5rem;
+        width: '100%';
+    }
+    .about .headerImage img {
+        margin-left: -20px;
+    }
+    .solution {
+        padding: 3rem 4rem;
+    }
+    .roadmap .row::before {
+        top: -95px;
+        width: 608px;
+    }
+    .tokenomic .roadImg img {
+        width: 30rem;
+    }
+    .tokenomic .tokpills {
+        padding: 0rem 2rem;
+    }
+    .roadmap .row .solBox .solLine {
+        top: -10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 100px;
+    }
+    .details {
+        padding: 1rem;
+    }
+
+    .details .detailsRow {
+        padding: 15px 25px 15px 5px;
+        height: auto;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        justify-content: space-around;
+    }
+
+    .details .detailsRow .detailsData .coinpill {
+        padding: 10px;
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    .details .detailsRow .detailsData .coinpillvalue {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .roadmap .row .solBox {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .buy {
+        padding: 1rem;
+    }
+}
+.active {
+    color: red; /* Add your desired styles for the active link */
+    font-weight: bold;
+}
